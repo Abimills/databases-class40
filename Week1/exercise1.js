@@ -5,8 +5,8 @@ const app = express();
 
 const database = mysql.createConnection({
  host  : 'localhost',
-  user     : 'ab',
-  password : 'Abel1234.',
+  user     : 'hyfuser',
+  password : 'hyfpassword',
 
 
 });
@@ -29,26 +29,26 @@ database.connect( () =>{
 
 
 database.query( `CREATE TABLE IF NOT EXISTS Invitee (
-    invitee_no INT 
-    , invitee_name VARCHAR(80)
-    ,invited_by VARCHAR(130)
+    invitee_no INT PRIMARY KEY ,
+     invitee_name VARCHAR(80),
+    invited_by VARCHAR(130)
     
     )` )
     let thisSql =
 database.query(
 `CREATE TABLE IF NOT EXISTS  Room (
-    room_no INT 
-    , room_name VARCHAR(80)
-    ,floor_number  INT
+    room_no INT PRIMARY KEY,
+    room_name VARCHAR(80),
+    floor_number  INT
     
     )` 
     
     
     )
 database.query(`CREATE TABLE  IF NOT EXISTS Meeting (
-    meeting_no INT
-    , meeting_title VARCHAR(80)
-    ,starting_time DATETIME,
+    meeting_no INT PRIMARY KEY,
+    meeting_title VARCHAR(255),
+    starting_time DATETIME,
     ending_time DATETIME,
     room_no INT
  
