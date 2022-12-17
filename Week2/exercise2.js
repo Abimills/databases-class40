@@ -26,9 +26,10 @@ if(err) throw err;
                  
                  con.query(`CREATE TABLE IF NOT EXISTS authors_paper_research(
 
-                  id  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                
                   author_id INT,
                   paper_id INT,
+                  PRIMARY KEY (author_id, paper_id),
                   FOREIGN KEY(author_id) REFERENCES  authors(author_id),
                   FOREIGN KEY(paper_id) REFERENCES research_papers(paper_id)
 

@@ -22,13 +22,13 @@ con.connect(() => {
 
                    con.query(`CREATE TABLE IF NOT EXISTS authors(
                       
-                     author_id INT AUTO_INCREMENT, 
+                     author_id INT AUTO_INCREMENT PRIMARY KEY, 
                     author_name  VARCHAR(255),
                     university VARCHAR(255),
                     date_of_birth DATE,
                     h_index INT,
-                    gender ENUM('M','F'),
-                     PRIMARY KEY (author_id)
+                    gender ENUM('M','F')
+                   
 
                    )`
                    
