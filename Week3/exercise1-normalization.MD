@@ -27,4 +27,4 @@ c) food table
 | food_id PK AUTO_INCREMENT | food_code | food_description |
 
 d)member_dinner table
-|member_dinner_id | member_id | dinner_id FK |
+|member_dinner_id | member_id | dinner_id FK |venue_id FK | food_id FK | 

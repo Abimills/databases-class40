@@ -43,4 +43,6 @@ function getPopulation(Country, name, code, cb) {
       cb(null, result[0].name);
     }
   );
-}
+};
+con.end();
+
